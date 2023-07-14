@@ -47,5 +47,23 @@ var searchHistory = document.querySelector(".search-history");
                 return "Error:" + response.status;
             }
         })
+        .then(function (data) {
+            console.log(data);
 
+            updateCurrentConditions(data);
+            updateForecast(data);
+            addToSearchHistory(city);
+        });
+    }
+
+    function updateCurrentConditions(){
+
+    }
+
+    function updateForecast() {
+
+    }
+
+    function addToSearchHistory () {
+        
     }
