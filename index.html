@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link type="stylesheet" src="./assets/css/style.css" />
 </head>
+
 <body>
-    
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <section>
+        <h2 class="searched-city"></h2>
+        <ul class="current-conditions">
+        </ul>
+    </section>
+    <section>
+        <h3>5-Day Forecast:</h3>
+        <div>
+            <containter>
+                <h4 class="day1"></h4>
+                <ul>
+                    <li class="temp">Temp:</li>
+                    <li class="wind">Wind:</li>
+                    <li class="humidity">Humidity:</li>
+                </ul>
+            </containter>
+            <containter>
+                <h4 class="day2"></h4>
+                <ul>
+                    <li class="temp">Temp:</li>
+                    <li class="wind">Wind:</li>
+                    <li class="humidity">Humidity:</li>
+                </ul>
+            </containter>
+            <containter>
+                <h4 class="day3"></h4>
+                <ul>
+                    <li class="temp">Temp:</li>
+                    <li class="wind">Wind:</li>
+                    <li class="humidity">Humidity:</li>
+                </ul>
+            </containter>
+            <containter>
+                <h4 class="day4"></h4>
+                <ul>
+                    <li class="temp">Temp:</li>
+                    <li class="wind">Wind:</li>
+                    <li class="humidity">Humidity:</li>
+                </ul>
+            </containter>
+            <containter>
+                <h4 class="day5"></h4>
+                <ul>
+                    <li class="temp">Temp:</li>
+                    <li class="wind">Wind:</li>
+                    <li class="humidity">Humidity:</li>
+                </ul>
+            </containter>
+        </div>
+    </section>
+    <aside>
+        <div>
+            <h5>Search for a City:</h5>
+            <input type="text">
+            <button class="search"></button>
+        </div>
+        <div>
+            <ul class="preset-cities">
+                <li><button class="atl"></button></li>
+                <li><button class="den"></button></li>
+                <li><button class="sea"></button></li>
+                <li><button class="sf"></button></li>
+                <li><button class="orl"></button></li>
+                <li> <button class="ny"></button></li>
+                <li><button class="chi"></button></li>
+                <li><button class="aus"></button></li>
+            </ul>
+        </div>
+    </aside>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
