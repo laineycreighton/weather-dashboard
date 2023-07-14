@@ -36,5 +36,16 @@ var searchHistory = document.querySelector(".search-history");
     });
 
     function getWeatherData(city){
-        
+        var apiKey = "2e9833e09f4a89add539473c0d6e159a";
+        var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey;
+    
+        fetch(apiUrl)
+        .then(function (response){
+            if (response.ok) {
+                return response.json();
+            } else {
+                return "Error:" + response.status;
+            }
+        })
+
     }
