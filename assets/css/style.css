@@ -29,7 +29,7 @@ aside {
 }
 
 /*----------------SEARCH BAR----------------*/
-h5 {
+.city-search {
     margin: 15px;
     font-size: 25px;
 }
@@ -79,12 +79,13 @@ h2 {
 }
 
 .card {
-    outline: red dashed 2px;
     background-color: steelblue;
+    padding: 20px;
 
 }
 
 .card ul li {
     list-style: none;
     color: aliceblue;
+    line-height: 2;
 }

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
+    <link rel="icon" type="image/png" href="./assets/images/weather-icon-png-2.png"/>
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -15,8 +16,8 @@
     <main>
         <aside>
             <div class="search-bar">
-                <h5>Search for a City:</h5>
-                <input type="text">
+                <label class="city-search" for="city-search">Search for a City:</label>
+                <input type="search" id="city-search">
                 <button class="search">SEARCH</button>
             </div>
             <div>
@@ -32,48 +33,48 @@
                 </ul>
             </section>
             <section>
-                <h3>5-Day Forecast:</h3>
+                <h2>5-Day Forecast:</h2>
                 <div class="week-forecast">
-                    <containter class="card">
+                    <div class="card">
                         <h4 class="day1"></h4>
                         <ul>
                             <li class="temp">Temp:</li>
                             <li class="wind">Wind:</li>
                             <li class="humidity">Humidity:</li>
                         </ul>
-                    </containter>
-                    <containter class="card">
+                    </div>
+                    <div class="card">
                         <h4 class="day2"></h4>
                         <ul>
                             <li class="temp">Temp:</li>
                             <li class="wind">Wind:</li>
                             <li class="humidity">Humidity:</li>
                         </ul>
-                    </containter>
-                    <containter class="card">
+                    </div>
+                    <div class="card">
                         <h4 class="day3"></h4>
                         <ul>
                             <li class="temp">Temp:</li>
                             <li class="wind">Wind:</li>
                             <li class="humidity">Humidity:</li>
                         </ul>
-                    </containter>
-                    <containter class="card">
+                    </div>
+                    <div class="card">
                         <h4 class="day4"></h4>
                         <ul>
                             <li class="temp">Temp:</li>
                             <li class="wind">Wind:</li>
                             <li class="humidity">Humidity:</li>
                         </ul>
-                    </containter>
-                    <containter class="card">
+                    </div>
+                    <div class="card">
                         <h4 class="day5"></h4>
                         <ul>
                             <li class="temp">Temp:</li>
                             <li class="wind">Wind:</li>
                             <li class="humidity">Humidity:</li>
                         </ul>
-                    </containter>
+                    </div>
                 </div>
             </section>
         </section>
