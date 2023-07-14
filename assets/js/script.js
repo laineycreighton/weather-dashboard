@@ -20,3 +20,21 @@
     //create element for button
     //add event listener to the button
     //use localStorage to getItem previously displayed city information 
+
+var searchInput = document.getElementById("city-search");
+var searchButton = document.querySelector(".search");
+var searchHistory = document.querySelector(".search-history");
+
+    searchButton.addEventListener("click", function () {
+        var input = searchInput.value.trim();
+
+        if (input !== "") {
+            getWeatherData(input);
+        } else {
+            alert("Please enter a city name");
+        }
+    });
+
+    function getWeatherData(city){
+        
+    }
