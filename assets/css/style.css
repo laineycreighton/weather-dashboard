@@ -1,0 +1,90 @@
+/*----------------HEADER----------------*/
+header {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(2, 0, 36, 1) 100%);
+}
+
+h1 {
+    color: aliceblue;
+    text-align: right;
+    padding: 30px;
+    margin: 40px;
+}
+
+/*----------------MAIN----------------*/
+main {
+    outline: red dashed 3px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+/*----------------------SEARCH----------------------*/
+aside {
+    outline: blue dashed 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 10px;
+}
+
+/*----------------SEARCH BAR----------------*/
+h5 {
+    margin: 15px;
+    font-size: 25px;
+}
+
+.search-bar {
+    outline: green dashed 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar input {
+    margin: 5px;
+}
+
+.search-bar button {
+    background-color: steelblue;
+    color: aliceblue;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/*----------------------RESULTS----------------------*/
+.results {
+    outline: lightskyblue dashed 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 50px;
+}
+
+.city-display {
+    outline: orange dashed 3px;
+    margin: 20px;
+    border: rgba(2, 0, 36, 1) solid 2px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+/*----------------DAILY FORECAST----------------*/
+.week-forecast {
+    outline: green dashed 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    outline: red dashed 2px;
+    background-color: steelblue;
+
+}
+
+.card ul li {
+    list-style: none;
+    color: aliceblue;
+}
