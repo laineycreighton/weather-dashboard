@@ -64,6 +64,9 @@ var searchHistory = document.querySelector(".search-history");
 
     }
 
-    function addToSearchHistory () {
-        
+    function addToSearchHistory (city) {
+        var prevCityEl = document.createElement('li');
+        prevCityEl.textContent = city;
+
+        searchHistory.appendChild(prevCityEl);
     }
