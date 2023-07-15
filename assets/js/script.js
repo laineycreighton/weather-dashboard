@@ -141,6 +141,7 @@ var searchHistory = document.querySelector(".search-history");
         }
     }
 
+    //adds search history buttons below the search bar
     function addToSearchHistory (city) {
         var searchHistory = document.querySelector('.search-history');
         var prevCityEl = document.createElement('button');
