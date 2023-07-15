@@ -35,7 +35,7 @@ var searchHistory = document.querySelector(".search-history");
         }
     });
 
-    function getWeatherData(city){
+    function getWeatherData(city) {
         var apiKey = "2e9833e09f4a89add539473c0d6e159a";
         var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey;
     
@@ -104,7 +104,7 @@ var searchHistory = document.querySelector(".search-history");
 
         //the for loop allows us to create a card for each forecast of the five day forecast
         for (var i = 0; i < 5; i++) {
-            var forecastData = data.list[i * 8];
+            var forecastData = data.list[i];
 
             var date = dayjs().add(i, "day").format("M D, YYYY");
             var temperature = Math.round(((forecastData.main.temp - 273.15) * 9) / 5 + 32);
@@ -142,8 +142,13 @@ var searchHistory = document.querySelector(".search-history");
     }
 
     function addToSearchHistory (city) {
-        var prevCityEl = document.createElement('li');
+        var searchHistory = document.querySelector('.search-history');
+        var prevCityEl = document.createElement('button');
         prevCityEl.textContent = city;
 
         searchHistory.appendChild(prevCityEl);
+
+        prevCityEl.addEventListener('click', function() {
+            getWeatherData(city);
+        });
     }

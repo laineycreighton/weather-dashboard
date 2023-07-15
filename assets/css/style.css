@@ -13,7 +13,6 @@ h1 {
 
 /*----------------MAIN----------------*/
 main {
-    outline: red dashed 3px;
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
@@ -21,7 +20,6 @@ main {
 
 /*----------------------SEARCH----------------------*/
 aside {
-    outline: blue dashed 3px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -35,7 +33,6 @@ aside {
 }
 
 .search-bar {
-    outline: green dashed 3px;
     display: flex;
     flex-direction: column;
 }
@@ -51,9 +48,15 @@ aside {
     margin: 5px;
 }
 
+.search-history {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
 /*----------------------RESULTS----------------------*/
 .results {
-    outline: lightskyblue dashed 5px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -61,7 +64,6 @@ aside {
 }
 
 .city-display {
-    outline: orange dashed 3px;
     margin: 20px;
     border: rgba(2, 0, 36, 1) solid 2px;
 }
@@ -72,7 +74,6 @@ h2 {
 
 /*----------------DAILY FORECAST----------------*/
 .week-forecast {
-    outline: green dashed 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
