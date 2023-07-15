@@ -56,8 +56,45 @@ var searchHistory = document.querySelector(".search-history");
         });
     }
 
-    function updateCurrentConditions(){
+    function updateCurrentConditions(data){
+        var currentConditions = document.querySelector(".current-conditions");
 
+        currentConditions.innerHTML = "";
+
+        //these variables set the value using the data from our api
+        var city = data.city.name;
+        var date = dayjs(data.list[0].dt_txt).format("MM DD, YYYY");
+        var temperature = data.list[0].main.temp;
+        var humidity = data.list[0].main.humidity;
+        var windSpeed = data.list[0].wind.speed;
+        var iconCode = data.list[0].weather[0].icon;
+
+        //these variables allows us to display our data as text
+        var cityNameEl = document.createElement("h2");
+        cityNameEl.textContent = city;
+
+        var dateEl = document.createElement("p");
+        dateEl.textContent = date;
+
+        var tempEl = document.createElement("p");
+        tempEl.textContent = "Temperature: " + temperature + "°F";
+
+        var humidityEl = document.createElement("p");
+        humidityEl.textContent = "Humidity: " + humidity + "%";
+
+        var windSpeedEl = document.createElement("p");
+        windSpeedEl.textContent = "Wind Speed: " + windSpeed + "mph";
+
+        var iconEl = document.createElement("img");
+        iconEl.src = iconCode;
+
+        //the appendChild allows our work above to actually display
+        currentConditions.appendChild(cityNameEl);
+        currentConditions.appendChild(dateEl);
+        currentConditions.appendChild(tempEl);
+        currentConditions.appendChild(humidityEl);
+        currentConditions.appendChild(windSpeedEl);
+        currentConditions.appendChild(iconEl);
     }
 
     function updateForecast() {
