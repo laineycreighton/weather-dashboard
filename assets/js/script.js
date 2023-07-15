@@ -98,7 +98,47 @@ var searchHistory = document.querySelector(".search-history");
     }
 
     function updateForecast() {
+        var forecastSection = document.querySelector(".week-forecast");
 
+        forecastSection.innerHTML = "";
+
+        //the for loop allows us to create a card for each forecast of the five day forecast
+        for (var i = 0; i < 5; i++) {
+            var forecastData = data.list[i * 8];
+
+            var date = dayjs().add(i, "day").format("MM DD, YYYY");
+            var temperature = forecastData.main.temp;
+            var humidity = forecastData.main.humidity;
+            var windSpeed = forecastData.wind.speed;
+            var iconCode = forecastData.weather[0].icon;
+
+            var card = document.createElement("div");
+            card.classList.add("card");
+
+            var dateEl = document.createElement("h4");
+            dateEl.textContent = date;
+
+            var tempEl = document.createElement("p");
+            tempEl.textContent = "Temperature: " + temperature + "°F";
+    
+            var humidityEl = document.createElement("p");
+            humidityEl.textContent = "Humidity: " + humidity + "%";
+    
+            var windSpeedEl = document.createElement("p");
+            windSpeedEl.textContent = "Wind Speed: " + windSpeed + "mph";
+    
+            var iconEl = document.createElement("img");
+            iconEl.src = iconCode;
+
+            card.appendChild(dateEl);
+            card.appendChild(tempEl);
+            card.appendChild(humidityEl);
+            card.appendChild(windSpeedEl);
+            card.appendChild(iconEl);
+
+            forecastSection.appendChild(card);
+
+        }
     }
 
     function addToSearchHistory (city) {
