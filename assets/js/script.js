@@ -63,8 +63,8 @@ var searchHistory = document.querySelector(".search-history");
 
         //these variables set the value using the data from our api
         var city = data.city.name;
-        var date = dayjs(data.list[0].dt_txt).format("MM DD, YYYY");
-        var temperature = data.list[0].main.temp;
+        var date = dayjs(data.list[0].dt_txt).format("M D, YYYY");
+        var temperature = Math.round(((data.list[0].main.temp - 273.15) * 9) / 5 + 32);
         var humidity = data.list[0].main.humidity;
         var windSpeed = data.list[0].wind.speed;
         var iconCode = data.list[0].weather[0].icon;
@@ -97,7 +97,7 @@ var searchHistory = document.querySelector(".search-history");
         currentConditions.appendChild(iconEl);
     }
 
-    function updateForecast() {
+    function updateForecast(data) {
         var forecastSection = document.querySelector(".week-forecast");
 
         forecastSection.innerHTML = "";
@@ -106,8 +106,8 @@ var searchHistory = document.querySelector(".search-history");
         for (var i = 0; i < 5; i++) {
             var forecastData = data.list[i * 8];
 
-            var date = dayjs().add(i, "day").format("MM DD, YYYY");
-            var temperature = forecastData.main.temp;
+            var date = dayjs().add(i, "day").format("M D, YYYY");
+            var temperature = Math.round(((forecastData.main.temp - 273.15) * 9) / 5 + 32);
             var humidity = forecastData.main.humidity;
             var windSpeed = forecastData.wind.speed;
             var iconCode = forecastData.weather[0].icon;
