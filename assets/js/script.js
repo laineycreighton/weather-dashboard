@@ -50,6 +50,7 @@ var searchHistory = document.querySelector(".search-history");
         .then(function (data) {
             console.log(data);
 
+            localStorage.setItem("City", data);
             updateCurrentConditions(data);
             updateForecast(data);
             addToSearchHistory(city);
@@ -86,7 +87,7 @@ var searchHistory = document.querySelector(".search-history");
         windSpeedEl.textContent = "Wind Speed: " + windSpeed + "mph";
 
         var iconEl = document.createElement("img");
-        iconEl.src = iconCode;
+        iconEl.src = "https://openweathermap.org/img/wn/" + iconCode + "@2x.png";
 
         //the appendChild allows our work above to actually display
         currentConditions.appendChild(cityNameEl);
@@ -128,8 +129,8 @@ var searchHistory = document.querySelector(".search-history");
             windSpeedEl.textContent = "Wind Speed: " + windSpeed + "mph";
     
             var iconEl = document.createElement("img");
-            iconEl.src = iconCode;
-
+            iconEl.src = "https://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+    
             card.appendChild(dateEl);
             card.appendChild(tempEl);
             card.appendChild(humidityEl);
@@ -150,6 +151,9 @@ var searchHistory = document.querySelector(".search-history");
         searchHistory.appendChild(prevCityEl);
 
         prevCityEl.addEventListener('click', function() {
-            getWeatherData(city);
+            var prevCity = localStorage.getItem("City");
+            getWeatherData(prevCity);
+            updateCurrentConditions(prevCity);
+            updateForecast(prevCity);
         });
     }
